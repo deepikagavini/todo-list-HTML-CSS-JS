@@ -105,7 +105,6 @@
     </div>
 
     <script>
-        // Function to add a new task
         function addTask() {
             var taskInput = document.getElementById("taskInput");
             var taskText = taskInput.value.trim();
@@ -120,7 +119,6 @@
             newTask.className = "taskItem";
             newTask.innerHTML = '<span>' + taskText + '</span>';
             
-            // Add a delete button next to the task
             var deleteButton = document.createElement("button");
             deleteButton.textContent = "Delete";
             deleteButton.className = "deleteButton";
@@ -131,11 +129,11 @@
             newTask.appendChild(deleteButton);
             taskList.appendChild(newTask);
             
-            // Clear the input field
+        
             taskInput.value = "";
         }
         
-        // Function to delete a task
+       
         function deleteTask(button) {
             var taskItem = button.parentNode;
             var taskList = taskItem.parentNode;
